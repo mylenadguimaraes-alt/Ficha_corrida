@@ -1,0 +1,138 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+body{
+    min-height: 100vh;
+    background-color:   #c3e1ff;
+}
+
+header{
+    padding-inline: 30px;
+    padding-block: 10px;
+}
+
+header h1{
+    color: #00568b;
+    padding-block-end: 3px;
+}
+
+header p
+{
+    font-size: 15px;
+}
+
+header p span{
+    color: #00568b;
+    font-weight: bold;
+    border-bottom: 2px solid #00568b;
+    font-weight: bold;
+}
+
+form {
+    margin: 30px;
+    min-width: 25%;
+    font-size: 15px;
+    
+}
+
+fieldset{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-block-end: 30px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #e6f4f1;
+    border: 3px solid;
+    border-color: #009eff;
+}
+
+fieldset legend{
+    font-size: xx-large;
+    text-align: center;
+    padding: 20px;
+    background-color: #e6f4f1;
+    border: 2px solid;
+    border-color: #009eff;
+    border-radius: 50%;
+    color: #00568b;
+
+}
+
+label{
+    padding-block-start: 20px;
+    padding-block-end: 5px;
+    color: #00568b;
+    
+}
+
+.dados .campos input[type=text]{
+    min-width: 100%;
+    padding: 5px;
+    border-color: white;
+
+}
+
+.dados{
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+
+.campos{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.campos label{
+    cursor: pointer;
+}
+
+
+
+fieldset .conteudo_separado
+{
+    padding-block-start: 15px;
+
+    
+}
+.conteudo_separado .titulo{
+    font-size: large;
+}
+.conteudo_separado .opcoes{
+    padding: 5px;
+}
+
+.conteudo_separado .opcoes label:hover,input:hover{
+    cursor: pointer;
+}
+
+#botao{
+    padding: 15px;
+}
+
+#botao input[type=submit]{
+    padding: 20px;
+    color: #00568b;
+    border: 2px solid #00568b;
+    background-color: #c3e1ff;
+    border-radius: 50%;
+}
+
+#botao input[type=submit]:hover{
+    cursor: pointer;
+    background-color: #00568b;
+    color: #c3e1ff;
+    border-color: black;
+}
+#botao input[type=submit]:active{
+    border-width: 5px;
+
+}
+
