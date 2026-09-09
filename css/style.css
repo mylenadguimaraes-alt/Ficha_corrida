@@ -132,7 +132,7 @@ fieldset .conteudo_separado
     border-color: black;
 }
 #botao input[type=submit]:active{
-    border-width: 5px;
+    transform: scale(0.9);
 
 }
 
