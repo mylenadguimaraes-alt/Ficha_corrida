@@ -1,138 +1,209 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    
 }
 
-body{
+body {
     min-height: 100vh;
-    background-color:   #c3e1ff;
+    background-color: #c3e1ff;
 }
 
-header{
-    padding-inline: 30px;
-    padding-block: 10px;
+/* CABEÇALHO */
+
+header {
+    padding: 20px 30px;
 }
 
-header h1{
+header h1 {
     color: #00568b;
-    padding-block-end: 3px;
+    padding-bottom: 5px;
 }
 
-header p
-{
+header p {
     font-size: 15px;
 }
 
-header p span{
+header p span {
     color: #00568b;
     font-weight: bold;
     border-bottom: 2px solid #00568b;
-    font-weight: bold;
 }
+
+/* FORMULÁRIO */
 
 form {
-    margin: 30px;
-    min-width: 25%;
+    width: calc(100% - 60px);
+    max-width: 1000px;
+    margin: 20px auto;
     font-size: 15px;
-    
 }
 
-fieldset{
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-block-end: 30px;
+fieldset {
+    width: 100%;
+    padding: 30px;
+    
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
+    gap: 10px;
+
     background-color: #e6f4f1;
-    border: 3px solid;
-    border-color: #009eff;
+    border: 3px solid #009eff;
+    border-radius: 10px;
 }
 
-fieldset legend{
-    font-size: xx-large;
+/* TÍTULO DO FORMULÁRIO */
+
+fieldset legend {
+    font-size: 28px;
     text-align: center;
-    padding: 20px;
+
+    padding: 15px 25px;
+
     background-color: #e6f4f1;
-    border: 2px solid;
-    border-color: #009eff;
+    border: 2px solid #009eff;
     border-radius: 50%;
+
     color: #00568b;
-
 }
 
-label{
-    padding-block-start: 20px;
-    padding-block-end: 5px;
-    color: #00568b;
-    
-}
+/* CAMPOS */
 
-.dados .campos input[type=text]{
-    min-width: 100%;
-    padding: 5px;
-    border-color: white;
-
-}
-
-.dados{
+.dados {
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+
     width: 100%;
 }
 
-.campos{
+.campos {
     display: flex;
     flex-direction: column;
-    width: 50%;
+
+    flex: 1 1 200px;
+    min-width: 0;
 }
 
-.campos label{
+.campos label {
+    padding: 15px 0 5px;
+    color: #00568b;
     cursor: pointer;
 }
 
+.campos input[type="text"] {
+    width: 100%;
+    padding: 10px;
 
-
-fieldset .conteudo_separado
-{
-    padding-block-start: 15px;
-
-    
+    border: 1px solid white;
+    border-radius: 5px;
+    outline: none;
 }
-.conteudo_separado .titulo{
+
+.campos input[type="text"]:focus {
+    border-color: #009eff;
+}
+
+/* OPÇÕES */
+
+.conteudo_separado {
+    padding-top: 15px;
+}
+
+.conteudo_separado .titulo {
+    display: block;
     font-size: large;
+    color: #00568b;
+    margin-bottom: 8px;
 }
-.conteudo_separado .opcoes{
+
+.conteudo_separado .opcoes {
+    display: inline-flex;
+    align-items: center;
+
     padding: 5px;
 }
 
-.conteudo_separado .opcoes label:hover,input:hover{
+.conteudo_separado .opcoes label {
+    padding: 0 5px;
+}
+
+.conteudo_separado .opcoes:hover,
+.conteudo_separado .opcoes label:hover {
     cursor: pointer;
 }
 
-#botao{
-    padding: 15px;
+/* BOTÃO */
+
+#botao {
+    padding-top: 20px;
 }
 
-#botao input[type=submit]{
-    padding: 20px;
+#botao input[type="submit"] {
+    padding: 12px 25px;
+
     color: #00568b;
     border: 2px solid #00568b;
     background-color: #c3e1ff;
-    border-radius: 50%;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.2s;
 }
 
-#botao input[type=submit]:hover{
-    cursor: pointer;
+#botao input[type="submit"]:hover {
     background-color: #00568b;
     color: #c3e1ff;
-    border-color: black;
-}
-#botao input[type=submit]:active{
-    transform: scale(0.9);
-
+    border-color: #00568b;
 }
 
+#botao input[type="submit"]:active {
+    transform: scale(0.95);
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    form {
+        width: calc(100% - 30px);
+        margin: 15px auto;
+    }
+
+    fieldset {
+        padding: 20px;
+    }
+
+    fieldset legend {
+        font-size: 22px;
+        padding: 12px 18px;
+    }
+
+    .dados {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .campos {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    .conteudo_separado .opcoes {
+        display: flex;
+    }
+
+}
